@@ -1,38 +1,195 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #414040;
+  transition: ease-in;
+}
+
+.dark {
+  background-color: #12161b;
+  color: #ffffff;
+  transition: ease-in;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.todo-container {
+  display: flex;
+  padding: 1.5rem;
+  min-height: 80vh;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Caprasimo', cursive;
+  font-weight: 500;
+}
+
+span {
+  font-family: 'BioRhyme', serif;
+  /* color: #262626; */
+}
+
+.list-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0px 0px 5px 0px rgba(192, 191, 191, 0.511);
+  border-radius: 5px;
+  margin: 0 5px;
+  width: 100;
+  max-width: 28rem;
+  min-width: 28rem;
+}
+
+.dark-mode-button {
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  position: relative;
+}
+
+.icon {
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.date {
+  color: #64748b;
+  font-size: 0.8rem;
+  padding-right: 5%;
+}
+
+.add-todo-form {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+  width: 100%;
+  margin: 15px 0;
+}
+
+.add-todo-input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: 'BioRhyme', serif;
+  font-weight: 400;
+  cursor: pointer;
+
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.172);
+  width: 30rem;
+  height: 3rem;
+}
+
+.submit-button {
+  border: none;
+  outline: none;
+  background-color: #393f4d;
   color: white;
+  font-family: 'Caprasimo', cursive;
+  font-size: .9rem;
+  font-weight: 400;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.172);
+  width: 5rem;
+  height: 3rem;
+  margin-left: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:hover {
+  cursor: pointer;
+  background-color: #2e323d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-button {
+  border: none;
+  outline: none;
+  background: none;
+  color: #991b1b;
+  font-size: larger;
+  position: relative;
+  margin: 0 0.2rem;
+  width: 30px;
+  height: 30px;
 }
+
+.delete-button:hover {
+  cursor: pointer;
+}
+
+ul.todo-list {
+  padding: 0;
+  max-width: 90%;
+  width: 90%;
+}
+
+li {
+  margin: 0.5rem 0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0px 0px 5px 0px rgba(192, 191, 191, 0.511);
+  border-radius: 5px;
+}
+
+.text {
+  width: 80%;
+  padding-right: 5%;
+  word-break: break-all;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #837d7d2f;
+  transition: 0.1s;
+}
+
+.edit-button {
+  border: none;
+  outline: none;
+  background-color: #393f4d;
+  color: white;
+  font-size: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.172);
+  width: 35px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.edit-input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.172);
+  width: 16.5rem;
+  height: 2rem;
+}
+
+/* import { MdDone, MdDelete } from "react-icons/md"; */
